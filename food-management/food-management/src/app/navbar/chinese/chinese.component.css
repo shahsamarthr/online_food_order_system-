@@ -1,0 +1,100 @@
+.navbar-collapse{
+    text-align:center;
+}
+
+.card:hover
+{
+    -webkit-box-shadow:-1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow:-1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    box-shadow:-1px 9px 40px -12px  rgba(0, 0, 0, 0.75);
+}
+.col-4-lg
+{
+    position: relative;
+    border-radius: 2em;    
+}
+.first
+{
+    height: 165px; 
+    transition: transform 2s ease-in-out;
+}
+.col-4-lg:hover
+{
+    /* opacity: 0.9; */
+    
+    zoom:105.5%;
+    /* transition: scale(1.15); */
+    
+}
+.myimg
+{
+    position: relative; 
+    margin-left: 0px; 
+    margin-top: 0px; 
+    z-index: 1;  
+}
+/* .sidenav
+{
+    position: relative;
+     margin-top: 200px;     
+} */
+.my title
+{
+    background-attachment:orange;
+}
+/* footer
+{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("/src/Footerimage.jpeg");
+    background-size: cover;
+    background-attachment: fixed; 
+    padding-top: 120px;
+    padding-bottom: 120px;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+} */
+/* #1
+{
+    z-index: 1;
+} */
+/* .social-icon
+{
+    z-index: 1;
+}
+.social-icon a
+{
+    margin: 0 16px 20px 16px;
+    display: inline-block;
+}
+
+.social-icon .fa
+{
+    font-size:30px;
+    color:deepskyblue;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background: white;
+    line-height:2;
+    transition: .3s;
+    border:10px solid #b1c9d1;
+    text-align: center;
+}
+
+.social-icon a:hover .fa
+{
+    border: 10px solid white; 
+}
+
+.bordernow
+{
+    width:80px;
+    border-bottom: 2px solid white;
+    margin: 0 auto;
+}
+
+.white
+{
+    color:white;
+} */
+
+/* Footer styling ends over here */

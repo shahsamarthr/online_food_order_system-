@@ -1,0 +1,329 @@
+  <nav class="navbar navbar-expand-lg  navbar-light" style="background-color:orangered;z-index: 1;"  >
+    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="navbar-brand" href="#">Navbar</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-between"
+       id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item ">
+        <label class="nav-link text-center" id="myid"href="#">Home <span class="sr-only">(current)</span></label>
+      </li>
+      <li class="nav-item ">
+        <label class="nav-link text-center"id="myid" (click)="demo()">Registration <span class="sr-only">(current)</span></label>
+      </li>
+      <li class="nav-item ">
+          <label class="nav-link text-center"id="myid" (click)="demo1()">Contact Us <span class="sr-only">(current)</span></label>
+        </li>
+      <li class="nav-item ">
+        <label class="nav-link" id="myid"(click)="about()" >About Us</label>
+      </li>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         
+          <a class="dropdown-item " href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+         
+        </div>
+      </li> -->
+      <li class="nav-item">
+        <label class="nav-link " id="myid"(click)="logout()" href="#">Sign Out</label>
+      </li>
+
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav> 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="C:\Users\Shah Samarth\Documents\food-management\aos-master\aos-master\dist\aos.js"></script>   
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* z-index: 1; */
+   /* margin-top: 110px;*/
+    top: 0;
+    left: 0;
+    background-color :#111;
+     overflow-x: hidden; 
+     transition: 0.7s; 
+    padding-top: 60px;
+}
+
+.sidenav .a {
+    padding: 30px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+     display: block; 
+    transition: 0.3s;
+    background-color:#111; 
+}
+
+.sidenav .a:hover {
+    color: #f1f1f1;
+}
+#Italian
+{
+  
+    text-decoration: none;
+    font-size: 25px;
+  display: block; 
+    transition: 0.3s;
+  color: #818181;
+  background-color:#111;
+  border:0px;
+  cursor: pointer;
+}
+#Italian:hover
+{
+  color: #f1f1f1;
+}
+/* .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 100px;}
+  .sidenav .a {font-size: 20px;}
+  #Italian {font-size: 20px;}
+}
+@media(max-width:720px)
+{
+  .container{
+    width :90%;
+  }
+}
+#demo1
+{
+  margin-left: 260px;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <!-- <a href="/navbar" class="closebtn" >&times;</a> -->
+  
+  <div class="a">
+    <h3>
+      <input type="button" id="Italian" name="Italian"  (click)="Punjabi()" value="Punjabi">
+     </h3>   
+      </div>
+
+      <div class="a">
+          <h3>
+          <input type="button" id="Italian" name="Italian" (click)="SouthIndian()" value="South Indian">
+          </h3>  
+        </div>
+          
+  <div class="a">
+      <h3>
+      <input type="button" id="Italian" name="Italian" (click)="chines()" value="Chinese">
+      </h3>
+    </div>
+
+  <div class="a">
+      <h3>
+  <input type="button" id="Italian" name="Italian" (click)="Italian()" value="Italian">
+      </h3>
+</div>
+</div>
+
+<!-- <h2 *ngif="isChecked";>
+  </h2> -->
+<!-- <span style="font-size:30px;cursor:pointer" id="trial1">&#9776; </span> -->
+<div class="myimg1">
+  <img src="\src\pexels-photo-461198.jpeg" class="myimg" style="width: 100%;height: 485px">
+  <img src="\src\11014_14_site_clear.jpeg" class="myimg" style="width: 100%;height: 485px">
+  <img src="\src\Cake.jpeg" class="myimg" style="width: 100%;height: 495px">
+  <img src="\src\Demo.jpeg" class="myimg" style="width: 100%;height: 485px">
+
+  
+  
+</div>
+<!-- <img src="\src\11014_14_site_clear.jpeg" class="myimg"> -->
+ <br><br><br><br> 
+<div class="container" style="margin-left: 290px">
+    <div class="row">
+      <div class ="col-4-lg">
+          <div class="card " [hidden]="Punjabi1 || chines1 || SouthIndian1"  style="width: 18rem"  data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
+              <img src="\src\Fresh-Pizza1.jpg" class="first" alt="card one">
+                <div class="card-body">
+                  <h3 class="card-title">Domino's Pizza</h3>
+                  <p class="card-title">Pizza, Fast Food
+                      Cost ₹300 for one
+                      Min ₹99   ·  Up to 30 min
+                      Accepts cash & online payments</p>
+                      <button  (click)="dominos()" class="btn btn-primary">Order online</button>
+                </div>
+          </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class ="col-4-lg">
+        <div class="card " [hidden]="Punjabi1 || chines1 || SouthIndian1" style="width: 18rem" >
+            <img src="\src\MacDonald.jpg" class="first" alt="card one">
+              <div class="card-body">
+                <h3 class="card-title">Mac Donald</h3>
+                <p class="card-title">Italain Food<br>
+                    Cost :Rs.450 for 2 person<br>
+                    Hours : 11am - 11pm
+                  </p>
+                    <button  (click)="mcdonald()" class="btn btn-primary">Order online</button>
+              </div>
+        </div>
+    </div>
+
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class ="col-4-lg">
+          <div class="card" [hidden]="Italian1 || chines1 || SouthIndian1" style="width: 18rem" data-aos="flip-left" data-aos-duration="500" data-aos-delay="900">
+              <img src="\src\images (2).jpg" class="first" alt="card one">
+                <div class="card-body">
+                  <h3 class="card-title">Blue Lagoons</h3>
+                  <p class="card-title">Punjabi Food<br>
+                      Cost : Rs.650 for 2 people<br>
+                      Hours : 11 am - 11pm </p>
+                      <button  (click)="punjabi()" class="btn btn-primary">Order online</button>
+                </div>
+          </div>
+      </div>
+     </div>
+     <br><br><br><br><br><br>
+     <div class="row">
+        <div class ="col-4-lg">
+            <div class="card" [hidden]="Italian1 || Punjabi1 || chines1 " style="width: 18rem">
+                <img src="\src\downloadsouth.jpg" class="first" alt="card one">
+                  <div class="card-body">
+                    <h3 class="card-title">So South</h3>
+                    <p class="card-title">South Indian<br>
+                        Cost : Rs.350 for 2 people <br> 
+                        Hours : 11 am - 11 pm  
+                      </p>
+                        <button  (click)=" southindian()" class="btn btn-primary">Order online</button>
+                  </div>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class ="col-4-lg">
+            <div class="card" [hidden]="Italian1 || Punjabi1 || SouthIndian1"  style="width: 18rem">
+                <img src="\src\Wokonfire.jpg" class="first" alt="card one">
+                  <div class="card-body">
+                    <h3 class="card-title">Wok On Fire</h3>
+                    <p class="card-title">Thai,Chinese,Asian<br>
+                        Cost : Rs.1000 for 2 people<br>
+                        Hours : 11 am - 11 pm
+                        </p>
+                        <button  (click)="chinese()" class="btn btn-primary">Order online</button>
+                  </div>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- <div class ="col-4-lg">
+            <div class="card" [hidden]="Italian1 || Punjabi1" style="width: 18rem">
+                <img src="\src\Fresh-Pizza1.jpg" class="first" alt="card one">
+                  <div class="card-body">
+                    <h3 class="card-title">Domino's Pizza</h3>
+                    <p class="card-title">Pizza, Fast Food
+                        Cost ₹300 for one
+                        Min ₹99   ·  Up to 30 min
+                        Accepts cash & online payments</p>
+                        <a href="#" class="btn btn-primary">Order online</a>
+                  </div>
+            </div>
+        </div> -->
+       </div>
+</div> 
+<!-- <footer class="footer">
+  <div class="container" id="1">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+       <div class="social-icon">
+         <a href=""><i class="fa fa-facebook"></i></a>
+         <a href=""><i class="fa fa-twitter"></i></a>
+         <a href=""><i class="fa fa-google-plus"></i></a>
+         <a href=""><i class="fa fa-pinterest"></i></a>
+         <a href=""><i class="fa fa-rss"></i></a>
+         <a href=""><i class="fa fa-linkedin"></i></a>
+          <a href=""><i class="fa fa-vimeo-square"></i></a> 
+         <a href=""><i class="fa fa-youtube-square"></i></a>
+          <a href=""><i class="fa fa-dribbble"></i></a> 
+         </div>
+         <div class="copyright">
+           <p class="white"> &copy; 2018 <b>FOODIE BAY</b> </p>
+           <div class="bordernow">
+
+             </div>
+           </div>
+      </div>
+      </div>
+    </div>          
+  </footer> -->
+ <!-- <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>  -->
+<body>
+  <script>
+    $(document).ready(function(){
+      $('.col-4-lg').hover(
+        function(){
+          $(this).animate({
+            marginTop:"=-2%",
+          },200);
+        },
+        function(){
+          $(this).animate({
+            marginTop:"=0%",
+          },200);
+        }
+      )
+    });
+    AOS.init();
+    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script src="C:\Users\Shah Samarth\Documents\food-management\aos-master\aos-master\dist\aos.js"></script>   
+
+      <!-- <script type="text/javascript">
+       
+      </script> -->
+  </body>
+
+ </body>
+</html>   
+
+  

@@ -1,0 +1,112 @@
+<html>
+<head>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;
+        margin-top:60px;
+    
+    }
+form {border: none;}
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 12px 20px;
+    margin:8px 60px;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+b{
+    margin:8px 60px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 60px;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    font-size: 25px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+input:checked {
+    height: 35px;
+    width: 35px;
+}
+.container {
+    padding: 16px;
+    /* height: 100; */
+    
+}
+
+div.container{
+    font-size: 25px;
+    
+}
+a:link {
+    color: green;
+}
+
+
+a:visited {
+    color: green;
+}
+
+
+a:hover {
+    color: red;
+}
+
+
+a:active {
+    color: yellow;
+}
+.demo1
+{
+    margin: 8px 60px;
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+<form action="/navbar">
+  
+
+  <div class="container">
+    <label  for="uname"><b >Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b >Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label class="demo1">
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <label>
+            <a href="#">Forgot Pasword?</a> 
+          </label>
+<br/>
+<br/>
+          <label class="demo1">
+            <a href="registration.html">New User?</a> 
+          </label>     
+  </div>
+
+  
+</body>
+</html>

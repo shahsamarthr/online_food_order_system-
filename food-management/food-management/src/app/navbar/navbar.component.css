@@ -1,0 +1,67 @@
+.navbar-collapse{
+    
+    text-align:center;
+}
+.text
+{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+#myid
+{
+cursor: pointer;    
+}
+.first
+{
+    height: 165px; 
+    transition: transform 2s ease-in-out;
+}
+.card:hover
+{
+    transform: scale(1.1);
+
+    -webkit-box-shadow:-1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow:-1px 9px 40px -12px rgba(0, 0, 0, 0.75);
+    box-shadow:-1px 9px 40px -12px  rgba(0, 0, 0, 0.75);
+}
+.col-4-lg
+{
+    position: relative;
+    border-radius: 2em;    
+}
+.first
+{
+  
+    transition: transform 2s ease-in-out;
+}
+.col-4-lg:hover
+{
+    /* opacity: 0.9; */
+    
+    zoom:105.5%;
+    /* transition: scale(1.15); */
+    
+}
+.myimg
+{
+    position: relative; 
+    margin-left: 0px; 
+    margin-top: 0px; 
+    z-index: 1;  
+}
+/* .sidenav
+{
+    position: relative;
+     margin-top: 200px;     
+} */
+
+.myimg1
+{
+    margin-top: 0px; 
+    z-index: 1;
+}
+

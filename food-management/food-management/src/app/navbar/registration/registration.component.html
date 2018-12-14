@@ -1,0 +1,97 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--Contains css icons -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main">
+        <header>
+        <!-- <div class="image">
+            <img src="\src\foodimage.jpg">
+            </div> -->
+            <div class="company">
+                Foodie Bay
+                </div>
+                <div class="heading">Sign up form</div><!--Write Heading Over here -->
+            </header>
+            <form action="/navbar" method="POST" id="form-box" (ngSubmit)="onSubmit()" #userForm="ngForm">
+                    <div class="icon">
+                        <span class="fa fa-user"></span>
+                        </div>
+                    <div class="input form-group">
+                        <input type="text" name="username" #name="ngModel" placeholder="Username" class="inp" required [(ngModel)]="userModel.username">
+                
+                        <div [hidden]="name.valid || name.untouched"
+                        class=" text-danger">
+                     Name is required
+                    </div>
+                        </div>
+                   
+                        <div class="icon">
+                                <span class="fa fa-envelope"></span>
+                                </div>
+                            <div class="input">
+                                <input type="email" name="email" #email="ngModel" placeholder="Email" class="inp" required [(ngModel)]="userModel.email"> 
+                                <div [hidden]="email.valid || email.untouched"
+                                class=" text-danger">
+                             Email is required
+                            </div>
+                            </div>
+                                <!-- <div class="icon">
+                                        <span class="fa fa-lock"></span>
+                                        </div>
+                                    <div class="input">
+                                        <input type="password" name="password" placeholder="Password"  class="inp"  [(ngModel)]="userModel.password" required>
+                                        </div>
+                                        <div class="icon">
+                                                <span class="fa fa-lock"></span>
+                                                </div>
+                                            <div class="input">
+                                                <input type="password" name="Re-Typepassword"    value="mypassword1" placeholder="Re-Typepassword" class="inp" required [(ngModel)]="userModel.repassword">
+                                                            
+                                           </div>-->
+                                           <div  class="icon">
+                                                <span class="fa fa-lock"></span>
+                                            </div>
+                                            <div class="input">
+                                                <input type="password"  class="inp"  [(ngModel)]="userModel.password" required #pass1="ngModel" name="password1" placeholder="Password" ngModel>
+                                                <small class="text-danger" [class.d-none]="pass1.valid || pass1.untouched">Enter Password</small>
+                                              </div>
+                                              
+                                              <div  class="icon">
+                                                    <span class="fa fa-lock"></span>
+                                                </div>
+                                                <div class="input">
+                                                  <input type="password" class="inp"   required #pass2="ngModel" name="password2" placeholder="Re-Typepassword" ngModel>
+                                                  <small class="text-danger" [class.d-none]="pass2.valid || pass2.untouched">Enter Password2</small>
+                                              </div>
+                                              <div >
+                                                <small class="text-danger" [class.d-none]="pass2.value==pass1.value">Password Dont Match</small>
+                                              </div>
+                                                <div class="icon"> 
+                                                        <span class="fa fa-phone"></span>
+                                                        </div>
+                                                    <div class="input form-group">
+                                                        <input type="number" #phone="ngModel" pattern="^\d{10}$" name="Phonenumber" placeholder="MobileNo."  [class.is-invalid]="phone.invalid && phone.touched" class="inp" required [(ngModel)]="userModel.mobilenumber">
+                                                          <div *ngIf='phone.errors && (phone.invalid || phone.touched)'>
+                                                            <!-- <small class="text-danger" [hidden]="phone.invalid">Phone number is required</small> -->
+                                                            <small class="text-danger" [class.d-none]="phone.errors.pattern">Phone number must be 10 digits</small>
+                                                             </div>  
+                                                        </div> 
+                                                <input type="submit" 
+                                                 name="submit" value="REGISTER NOW" class="btn sub-btn" [disabled]="!userForm.form.valid" (click)="Registration()">
+                                                 
+                                                <div [hidden]="!submitted">
+                                                    <p> You are registered sucessfully</p>
+                                                </div>        
+                                                 <!-- <buttoin type="submit" class="btn sub-btn" [disabled]="!userForm.form.valid">Submit</button>
+                                                 -->
+                </form>
+                <div class="footer">
+                    <p>Already have an account? &nbsp;<a href="login" >Login</a> </p>
+                    </div>
+        </div>
+</body>
+</html>

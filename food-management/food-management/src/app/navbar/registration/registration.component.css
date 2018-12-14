@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Asap');
+        
+*{
+    
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: 'Asap' , sans-serif;  
+}
+ body{
+    background:#34495e; 
+     opacity: 2; 
+}
+ .main{
+    width:400px;
+    background: #eceff1;
+    margin: 50px auto;
+    position: relative;
+    padding : 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #555;
+    
+} 
+header{
+    text-align: center;
+}
+img{
+    width:100px;
+    height:100px;
+} 
+ .company{
+    font-size: 40px;
+    font-family: 'Asap',sans-serif;
+    font-weight: bold;
+    color: #009688;
+} 
+.heading{
+    font-weight: bold;
+    color:#666;
+    font-size:18px;
+}
+#form-box{
+    padding: 10px;
+}
+.inp{
+    width:100%;
+    padding: 10px 10px 10px 0px;
+    margin-bottom:15px;
+    border:none;
+    border-bottom: 1px solid #999;
+    font-size : 16px;
+    color:#009688;
+    background: #eceff1;
+}
+/* .err{
+    width:100%;
+    padding: 10px 10px 10px 0px;
+    margin-bottom:15px;
+    border:none;
+    border-bottom: 1px solid #999;
+    font-size : 16px;
+    color:red;
+    background: #eceff1;
+} */
+
+.inp:focus{
+    outline: none;
+    color:#009688;
+    font-weight: bolder;
+    border-bottom:1px solid #009688;
+
+}
+.sub-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:3px;
+    font-weight:bold;
+    font-size:16px;
+    color:#fff;
+    background: #009688;
+    cursor:pointer;
+}
+.sub-btn:focus{
+    outline: none;
+}
+.sub-btn:hover{
+    background: #00796b;
+}
+.footer{
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    color:#546e7a;
+
+}
+.footer a{
+    text-decoration:none;
+    color:#1976d2;
+}
+.icon{
+    position: absolute;
+    width: 30px;
+    height:30px;
+    font-size:25px;
+    padding: 8px 8px 8px 0;
+    color: #009688;
+}
+.input{
+    margin-left: 35px;
+}
+@media(max-width:720px){
+    .main{
+        width:90%;
+    }
+}

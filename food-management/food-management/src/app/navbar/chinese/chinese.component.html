@@ -1,0 +1,618 @@
+<nav class="navbar navbar-expand-lg  navbar-light" style="background-color:orangered;z-index: 1;"  >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-between"
+     id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto ">
+    <li class="nav-item ">
+      <label class="nav-link text-center" href="#" (click)="home()">Home <span class="sr-only">(current)</span></label>
+    </li>
+    
+    <li class="nav-item ">
+      <label class="nav-link" (click)="about()" >About Us</label>
+    </li>
+    <li class="nav-item">
+      <label class="nav-link " href="#">Sign Out</label>
+    </li>
+
+  </ul>
+  </div>
+</nav> 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 
+<style>
+  body {
+  font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      /* z-index: 1; */
+     /* margin-top: 110px;*/
+      top: 0;
+      left: 0;
+      background-color :#111;
+       overflow-x: hidden; 
+       transition: 0.7s; 
+      padding-top: 60px;
+  }
+  
+  .sidenav .a {
+      padding: 30px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+       display: block; 
+      transition: 0.3s;
+      background-color:#111; 
+  }
+  
+  .sidenav .a:hover {
+      color: #f1f1f1;
+  }
+  #Italian
+  {
+    
+      text-decoration: none;
+      font-size: 25px;
+    display: block; 
+      transition: 0.3s;
+    color: #818181;
+    background-color:#111;
+    border:0px;
+    cursor: pointer;
+  }
+  #Italian:hover
+  {
+    color: #f1f1f1;
+  }
+  /* .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+  } */
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 100px;}
+    .sidenav .a {font-size: 20px;}
+    #Italian {font-size: 20px;}
+  }
+  @media(max-width:720px)
+  {
+    .container{
+      width :90%;
+    }
+  }
+  #demo1
+  {
+    margin-left: 260px;
+  }
+  
+  </style>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <!-- <a href="/navbar" class="closebtn" >&times;</a> -->
+    
+    <div class="a">
+      <h3>
+        <input type="button" id="Italian" name="Italian"  (click)="Bestsellers()" value="Soup">
+       </h3>   
+    </div>
+  
+    <div class="a">
+            <h3>
+            <input type="button" id="Italian" name="Italian" (click)="Smallpizza()" value="Rice">
+            </h3>  
+    </div>
+            
+    <div class="a">
+        <h3>
+        <input type="button" id="Italian" name="Italian" (click)="Largepizza()" value="BestSellers">
+        </h3>
+    </div>
+  
+    <div class="a">
+        <h3>
+    <input type="button" id="Italian" name="Italian" (click)="Breads()" value="Noodles">
+        </h3>
+    </div>
+    <!-- <div class="a">
+    <h3>
+    <input type="button" id="Italian" name="Italian" (click)="Desserts()" value="Desserts">
+    </h3>
+    </div> -->
+  
+  
+</div>
+<!-- <a href="#">Desserts</a> -->
+
+
+
+<!-- <div class="container" style="margin-left: 290px;">
+  <br><br>
+      <h2 class="my title" style="background-color: orange;width: 20%">Bestsellers</h2><br>
+    <div class="row" >
+    <div class ="col-4-lg" >
+        <div class="card" style="width: 18rem">
+            <img src="\src\images1.jpg" class="first" alt="card one">
+              <div class="card-body">
+                <h3 class="card-title">  7" Quattro Formaggi Pizza</h3>
+                <p class="card-title">
+                
+                  Pizzas<br>
+                  INR:203
+
+                </p>
+                    <button  (click)="dominos()" class="btn btn-success">Order online</button>
+              </div>
+        </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class ="col-4-lg">
+        <div class="card" style="width: 18rem">
+            <img src="\src\images (1).jpg" class="first" alt="card one">
+              <div class="card-body">
+                <h3 class="card-title">7" Paneer Tikka Pizza</h3>
+                <p class="card-title">
+                    Pizzas<br>
+                    INR:239
+                    </p>
+                    <a href="#" class="btn btn-success">Order online</a>
+              </div>
+        </div>
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class ="col-4-lg">
+        <div class="card" style="width: 18rem">
+            <img src="\src\93618 (1).jpg" class="first" alt="card one">
+              <div class="card-body">
+                <h3 class="card-title">7" White Special Pizza</h3>
+                <p class="card-title">
+                    Pizzas<br>
+                    INR:245
+                </p>
+                    <a href="#" class="btn btn-success">Order online</a>
+              </div>
+        </div>
+    </div>
+   </div>
+   <br><br><br><br><br>
+   <div class="row">
+      <div class ="col-4-lg">
+          <div class="card" style="width: 18rem">
+              <img src="\src\maxresdefault.jpg" class="first" alt="card one">
+                <div class="card-body">
+                  <h3 class="card-title">7" Special Pan Pizza</h3>
+                  <p class="card-title">Pizzas<br>
+                    INR:245</p>
+                      <a href="#" class="btn btn-success">Order online</a>
+                </div>
+          </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class ="col-4-lg">
+          <div class="card" style="width: 18rem">
+              <img src="\src\download.jpg" class="first" alt="card one">
+                <div class="card-body">
+                  <h3 class="card-title">Cilantro Chilli Bread
+                                            </h3>
+                  <p class="card-title">Breads & Appetizers<br>
+                      INR:135
+</p>
+                      <a href="#" class="btn btn-success">Order online</a>
+                </div>
+          </div>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class ="col-4-lg">
+          <div class="card" style="width: 18rem">
+              <img src="\src\LavaCakes_Birthday_comp1.jpg" class="first" alt="card one">
+                <div class="card-body">
+                  <h3 class="card-title">Choco Lava Cake Delight</h3>
+                  <p class="card-title">
+                      Desserts<br>
+                      INR:99
+                  </p>
+                      <a href="#" class="btn btn-success">Order online</a>
+                </div>
+          </div>
+      </div>
+     </div>
+  </div>  -->
+  <div class="container" style="margin-left: 290px">
+      <br><br>
+          <h2 class="my title" style="background-color: orange;width: 20%">Soup</h2><br>
+        <div class="row" >
+        <div class ="col-4-lg" >
+            <div class="card" style="width: 18rem">
+                <img src="\src\Chinesesoup1.jpg" class="first" alt="card one">
+                  <div class="card-body">
+                    <h3 class="card-title"> Hot N Sour </h3>
+                    <p class="card-title">
+                    
+                      Soup<br>
+                      INR:56 
+    
+                    </p>
+                    <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                  </div>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class ="col-4-lg">
+            <div class="card" style="width: 18rem">
+                <img src="\src\Chinesesoup2.jpg" class="first" alt="card one">
+                  <div class="card-body">
+                    <h3 class="card-title">Manchow soup</h3>
+                    <p class="card-title">
+                       Soup <br>
+                        INR:56 
+                        </p>
+                        <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                  </div>
+            </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class ="col-4-lg">
+            <div class="card" style="width: 18rem">
+                <img src="\src\Chinesesoup3.jpg" class="first" alt="card one">
+                  <div class="card-body">
+                    <h3 class="card-title">Crispy Wonton</h3>
+                    <p class="card-title">
+                        Soup<br>
+                        INR:66 
+                    </p>
+                    <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                  </div>
+            </div>
+        </div>
+       </div>
+       <!-- <br><br><br><br><br>
+       <div class="row">
+          <div class ="col-4-lg">
+              <div class="card" style="width: 18rem">
+                  <img src="\src\maxresdefault.jpg" class="first" alt="card one">
+                    <div class="card-body">
+                      <h3 class="card-title">7" Special Pan Pizza</h3>
+                      <p class="card-title">Pizzas<br>
+                        INR:245</p>
+                          <a href="#" class="btn btn-success">Order online</a>
+                    </div>
+              </div>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class ="col-4-lg">
+              <div class="card" style="width: 18rem">
+                  <img src="\src\pizza-vegan-1280x640.jpg" class="first" alt="card one">
+                    <div class="card-body">
+                      <h3 class="card-title">7" 4 Pepper & Onion Pizza
+                                                </h3>
+                                                <p class="card-title">Pizzas<br>
+                                                  INR:245</p>
+                          <a href="#" class="btn btn-success">Order online</a>
+                    </div>
+              </div>
+          </div>
+        
+         </div> -->
+      </div> 
+      <div class="container" style="margin-left: 290px">
+          <br><br>
+              <h2 class="my title" style="background-color: orange;width: 20%"> Rice </h2><br>
+            <div class="row" >
+            <div class ="col-4-lg" >
+                <div class="card" style="width: 18rem">
+                    <img src="\src\Chineserice1.jpg" class="first" alt="card one">
+                      <div class="card-body">
+                        <h3 class="card-title"> Korean Fried Rice </h3>
+                        <p class="card-title">
+                        
+                          Rice<br>
+                          INR:192 
+        
+                        </p>
+                        <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                      </div>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class ="col-4-lg">
+                <div class="card" style="width: 18rem">
+                    <img src="\src\Chineserice2jpg.jpg" class="first" alt="card one">
+                      <div class="card-body">
+                        <h3 class="card-title">Chilly Garlic Rice</h3>
+                        <p class="card-title">
+                            Rice<br>
+                            INR:179 
+                            </p>
+                            <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                      </div>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class ="col-4-lg">
+                <div class="card" style="width: 18rem">
+                    <img src="\src\Chineserice3.jpg" class="first" alt="card one">
+                      <div class="card-body">
+                        <h3 class="card-title">Veg Fried Rice</h3>
+                        <p class="card-title">
+                            Rice <br>
+                            INR:161 
+                        </p>
+                        <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                      </div>
+                </div>
+            </div>
+           </div>
+           <!-- <br><br><br><br><br>
+           <div class="row">
+              <div class ="col-4-lg">
+                  <div class="card" style="width: 18rem">
+                      <img src="\src\maxresdefault.jpg" class="first" alt="card one">
+                        <div class="card-body">
+                          <h3 class="card-title">10" Special Pan Pizza</h3>
+                          <p class="card-title">Pizzas<br>
+                            INR:245</p>
+                              <a href="#" class="btn btn-success">Order online</a>
+                        </div>
+                  </div>
+              </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div class ="col-4-lg">
+                  <div class="card" style="width: 18rem">
+                      <img src="\src\pizza-vegan-1280x640.jpg" class="first" alt="card one">
+                        <div class="card-body">
+                          <h3 class="card-title">10" 4 Pepper & Onion Pizza
+                                                    </h3>
+                                                    <p class="card-title">Pizzas<br>
+                                                      INR:245</p>
+                              <a href="#" class="btn btn-success">Order online</a>
+                        </div>
+                  </div>
+              </div>
+            
+             </div> -->
+          </div> 
+          <div class="container" style="margin-left: 290px">
+              <br><br>
+                  <h2 class="my title" style="background-color: orange;width: 20%">Bestsellers</h2><br>
+                <div class="row" >
+                <div class ="col-4-lg" >
+                    <div class="card" style="width: 18rem">
+                        <img src="\src\BestSeller1.jpg" class="first" alt="card one">
+                          <div class="card-body">
+                            <h3 class="card-title"> Spring Roll</h3>
+                            <p class="card-title">
+                            
+                              Bestsellers<br>
+                              INR:102
+            
+                            </p>
+                            <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                          </div>
+                    </div>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class ="col-4-lg">
+                    <div class="card" style="width: 18rem">
+                        <img src="\src\BestSeller4.jpg" class="first" alt="card one">
+                          <div class="card-body">
+                            <h3 class="card-title"> Dry Manchurian</h3>
+                            <p class="card-title">
+                                Bestsellers<br>
+                                INR:120
+                                </p>
+                                <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                          </div>
+                    </div>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class ="col-4-lg">
+                    <div class="card" style="width: 18rem">
+                        <img src="\src\BestSeller3.jpg" class="first" alt="card one">
+                          <div class="card-body">
+                            <h3 class="card-title">Gravy Manchurian</h3>
+                            <p class="card-title">
+                                Bestsellers<br>
+                                INR:142
+                            </p>
+                            <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                          </div>
+                    </div>
+                </div>
+               </div>
+               <br><br><br><br><br>
+               <div class="row">
+                  <div class ="col-4-lg">
+                      <div class="card" style="width: 18rem">
+                          <img src="\src\BestSeller5.jpg" class="first" alt="card one">
+                            <div class="card-body">
+                              <h3 class="card-title">Hakka Noodles</h3>
+                              <p class="card-title">Bestsellers<br>
+                                INR:158</p>
+                                <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                            </div>
+                      </div>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class ="col-4-lg">
+                      <div class="card" style="width: 18rem">
+                          <img src="\src\BestSeller6.jpg" class="first" alt="card one">
+                            <div class="card-body">
+                              <h3 class="card-title">Veg Sezwan Rice
+                                                        </h3>
+                                                        <p class="card-title">Bestsellers<br>
+                                                          INR:148</p>
+                                                          <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                            </div>
+                      </div>
+                  </div>
+                
+                 </div>
+              </div> 
+               
+          <div class="container" style="margin-left: 290px">
+              <br><br>
+                  <h2 class="my title" style="background-color: orange;width: 20%">Noodles</h2><br>
+                <div class="row" >
+                    <div class ="col-4-lg">
+                        <div class="card" style="width: 18rem">
+                            <img src="\src\BestSeller5.jpg" class="first" alt="card one">
+                              <div class="card-body">
+                                <h3 class="card-title">Hakka Noodles
+                                                          </h3>
+                                <p class="card-title">Noodles<br>
+                                    INR:158
+              </p>
+              <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                              </div>
+                        </div>
+                    </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class ="col-4-lg">
+                    <div class="card" style="width: 18rem">
+                        <img src="\src\Noodles1.jpg" class="first" alt="card one">
+                          <div class="card-body">
+                            <h3 class="card-title">Veg Cilantro </h3>
+                            <p class="card-title">Noodles<br>
+
+                              INR:124
+                              
+        </p>
+        <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                          </div>
+                    </div>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class ="col-4-lg">
+                <div class="card" style="width: 18rem">
+                  <img src="\src\Noodles2.jpg" class="first" alt="card one">
+                    <div class="card-body">
+                      <h3 class="card-title">Chilli Garlic </h3>
+                      <p class="card-title">Noodles<br>
+
+                        INR:135
+                        
+  </p>
+  <button  (click)="myevent()" class="btn btn-success">Order online</button>
+                    </div>
+                    </div>
+              </div>
+          </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               </div>
+               <!-- <br><br><br><br><br> -->
+               
+              <!-- </div>  -->
+              <!-- <div class="container" style="margin-left: 290px">
+                  <br><br>
+                      <h2 class="my title" style="background-color: orange;width: 20%">Desserts</h2><br>
+                    <div class="row" >
+                        <div class ="col-4-lg">
+                            <div class="card" style="width: 18rem">
+                                <img src="\src\MCcake.png" class="first" alt="card one">
+                                  <div class="card-body">
+                                    <h3 class="card-title">McCafe-BlueBerry Cheese Cake</h3>
+                                    <p class="card-title">
+                                        Desserts<br>
+                                        INR:202
+                                    </p>
+                                        <a href="/navbar" class="btn btn-success">Order online</a>
+                                  </div>
+                            </div>
+                        </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class ="col-4-lg">
+                      <div class="card" style="width: 18rem">
+                          <img src="\src\MCCake1.png" class="first" alt="card one">
+                            <div class="card-body">
+                              <h3 class="card-title">McCafe-Chocolate Express Cake</h3>
+                              <p class="card-title">
+                                  Desserts<br>
+                                  INR:179
+                              </p>
+                                  <a href="/navbar" class="btn btn-success">Order online</a>
+                            </div>
+                      </div>
+                  </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class ="col-4-lg">
+                      <div class="card" style="width: 18rem">
+                          <img src="\src\MCcake2.png" class="first" alt="card one">
+                            <div class="card-body">
+                              <h3 class="card-title">Choco Marble Slice Cake</h3>
+                              <p class="card-title">
+                                  Desserts<br>
+                                  INR:106
+                              </p>
+                                  <a href="/navbar" class="btn btn-success">Order online</a>
+                            </div>
+                      </div>
+                  </div>
+                   </div>
+                   <br><br><br><br><br>
+                   
+                  </div> -->
+                  <!-- <footer class="footer">
+                      <div class="container" id="1">
+                        <div class="row">
+                          <div class="col-sm-12 text-center">
+                           <div class="social-icon">
+                             <a href=""><i class="fa fa-facebook"></i></a>
+                             <a href=""><i class="fa fa-twitter"></i></a>
+                             <a href=""><i class="fa fa-google-plus"></i></a>
+                             <a href=""><i class="fa fa-pinterest"></i></a>
+                             <a href=""><i class="fa fa-rss"></i></a>
+                             <a href=""><i class="fa fa-linkedin"></i></a>
+                             <a href=""><i class="fa fa-vimeo-square"></i></a>
+                             <a href=""><i class="fa fa-youtube-square"></i></a>
+                             <a href=""><i class="fa fa-dribbble"></i></a>
+                             </div>
+                             <div class="copyright">
+                               <p class="white"> &copy; 2018 <b>FOODIE BAY</b> </p>
+                               <div class="bordernow">
+                  
+                                 </div>
+                               </div>
+                          </div>
+                          </div>
+                        </div>          
+                      </footer> -->
+
+<script>
+  $(document).ready(function(){
+    $('.col-4-lg').hover(
+      function(){
+        $(this).animate({
+          marginTop:"=-5%",
+        },200);
+      },
+      function(){
+        $(this).animate({
+          marginTop:"=1%",
+        },200);
+      }
+    )
+  });
+  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+</html>   
+
+
